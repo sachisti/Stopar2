@@ -300,7 +300,7 @@ module servoHoles() {
 
 module batteryHolder() {
     translate([-16.5, 63, -0.1])
-        cube([33, 60, 5]);
+        cube([33, 60, 7.5]);
     
     translate([9, 70+30-8, -1])
         cylinder(h=12, d=3.5, $fn=100);

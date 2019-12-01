@@ -213,6 +213,10 @@ module endstopHoles() {
             cylinder(h=11, d=3, $fn=100);
         translate([3.5+19, 0, 0])
             cylinder(h=11, d=3, $fn=100);
+        translate([3.5+19, 0, 6])
+            screwHole();
+        translate([3.5, 0, 6])
+            screwHole();
     }
 }
 
@@ -221,6 +225,10 @@ module sharpHolder() {
         cylinder(h=12, d=3.5, $fn=100);
     translate([-18.5, 25, -1])
         cylinder(h=12, d=3.5, $fn=100);
+    translate([18.5, 25, 5])
+            screwHole();
+    translate([-18.5, 25, 5])
+            screwHole();
 }
 
 module frontWheelHoles() {
@@ -232,6 +240,10 @@ module frontWheelHoles() {
         cylinder(h=5.1, d=4.75, $fn=100);
     translate([42, 17.5, 4.9])
         cylinder(h=5.2, d=5.25, $fn=100);
+}
+
+module screwHole() {
+    cylinder(h=6, d=4.5, $fn=100);
 }
 
 //REAR
@@ -283,6 +295,19 @@ module arduinoHoles() {
     mirror([180, 0, 0])
         translate([20-2.75, 130-2.75, -2.5])
             cylinder(h=15, d=3.5, $fn=100);
+    
+    translate([20-2.75, 90+2.75, -1])
+        screwHole();
+    mirror([180, 0, 0])
+        translate([20-2.75, 90+2.75, -1])
+            screwHole();
+    
+    translate([20-2.75, 130-2.75, -1])
+            screwHole();
+    mirror([180, 0, 0])
+        translate([20-2.75, 130-2.75, -1])
+            screwHole();
+    
 }
 
 module servoHoles() {
@@ -290,12 +315,20 @@ module servoHoles() {
         cylinder(h=10.2, d=3.5, $fn=100);
     translate([40-6.5-3.5-6.1+7.5, 60+2.5+22.5, -0.1])
         cylinder(h=10.2, d=3.5, $fn=100);
+    translate([40-6.5-3.5-6.1+7.5, 60-2.5, 5])
+        screwHole();
+    translate([40-6.5-3.5-6.1+7.5, 60+2.5+22.5, 5])
+        screwHole();
     
     //L
     translate([-40+6.5+3.5+6.1-7.5, 60-2.5, -0.1])
         cylinder(h=10.2, d=3.5, $fn=100);
     translate([-40+6.5+3.5+6.1-7.5, 60+2.5+22.5, -0.1])
         cylinder(h=10.2, d=3.5, $fn=100);
+    translate([-40+6.5+3.5+6.1-7.5, 60-2.5, 5])
+        screwHole();
+    translate([-40+6.5+3.5+6.1-7.5, 60+2.5+22.5, 5])
+        screwHole();
 }
 
 module batteryHolder() {
@@ -318,6 +351,12 @@ module batteryHolder() {
 module gyroHolder() {
     translate([20, 75, -0.1])
         cylinder(h=10.2, d=3.5, $fn=100);
+    translate([20, 75, -0.1])
+        screwHole();
+}
+
+module screwHole() {
+    cylinder(h=6, d=4.5, $fn=100);
 }
 
 module rear_body() {

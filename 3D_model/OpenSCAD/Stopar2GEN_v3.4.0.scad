@@ -182,16 +182,16 @@ module senzors() {
         cube([22, 7.62+1, 7]);
     
     //LEFT
-    translate([5, 12.5, 5])
-        cube([31.75+1, 7.62+1, 6]);
+    translate([5, 12.5, 3])
+        cube([31.75+1, 7.62+1, 8]);
     translate([31.75+1+5-hrubka+1, 17, -1])
         cylinder(h=12, d=hrubka, $fn=100);
     translate([5+hrubka-1, 17, -1])
         cylinder(h=12, d=hrubka, $fn=100);
     
     //RIGHT
-    translate([-36.75, 12.5, 5])
-        cube([31.75+1, 7.62+1, 6]);
+    translate([-36.75, 12.5, 3])
+        cube([31.75+1, 7.62+1, 8]);
     translate([-5-hrubka+1, 17, -1])
         cylinder(h=12, d=hrubka, $fn=100);
     translate([-36.75+hrubka-1, 17, -1])
@@ -302,15 +302,15 @@ module batteryHolder() {
     translate([-16.5, 63, -0.1])
         cube([33, 60, 5]);
     
-    translate([9, 70+30, -1])
+    translate([9, 70+30-8, -1])
         cylinder(h=12, d=3.5, $fn=100);
-    translate([-9, 70+30, -1])
+    translate([-9, 70+30-8, -1])
         cylinder(h=12, d=3.5, $fn=100);
     
     //kable
-    translate([8, 70, -1])
+    translate([8, 70-5, -1])
         cylinder(h=12, d=3.5, $fn=100);
-    translate([-8, 70, -1])
+    translate([-8, 70-5, -1])
         cylinder(h=12, d=3.5, $fn=100);
 
 }
