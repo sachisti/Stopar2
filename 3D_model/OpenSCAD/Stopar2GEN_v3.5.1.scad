@@ -5,8 +5,8 @@
 
 include <microservo_SG90.scad>;
 
-servo=0; //servo 1|0
-front=0; //front 1|0
+servo=1; //servo 1|0
+front=1; //front 1|0
 rear=1; // rear 1|0
 everything();
 
